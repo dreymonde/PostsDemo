@@ -32,7 +32,11 @@ final class API {
     }
 
     init(baseURL: BaseURL) {
+        #if DEBUG
+        self.network = .init(urlSession: .init(configuration: .ephemeral), baseURL: baseURL.url)
+        #else
         self.network = .init(urlSession: .shared, baseURL: baseURL.url)
+        #endif
     }
 }
 
@@ -48,11 +52,11 @@ extension API {
         struct ID: Identifier { var rawValue: Int }
     }
 
-    func getPosts() -> AnyPublisher<[Post], Swift.Error> {
+    func getPosts() -> AnyPublisher<[Post], Error> {
         network.httpGet([Post].self, path: "posts")
     }
 
-    func getPost(withID id: Post.ID) -> AnyPublisher<Post, Swift.Error> {
+    func getPost(withID id: Post.ID) -> AnyPublisher<Post, Error> {
         network.httpGet(Post.self, path: "posts/\(id.rawValue)")
     }
 }
@@ -98,7 +102,7 @@ extension API {
         }
     }
 
-    func getUser(withID id: User.ID) -> AnyPublisher<User, Swift.Error> {
+    func getUser(withID id: User.ID) -> AnyPublisher<User, Error> {
         network.httpGet(User.self, path: "users/\(id.rawValue)")
     }
 }
@@ -113,13 +117,13 @@ extension API {
         var author: User
     }
 
-    func getPostsWithUsers() -> AnyPublisher<[PostWithUser], Swift.Error> {
+    func getPostsWithUsers() -> AnyPublisher<[PostWithUser], Error> {
         getPosts()
             .flatMap(populatePosts)
             .eraseToAnyPublisher()
     }
 
-    private func populatePosts(posts: [Post]) -> AnyPublisher<[PostWithUser], Swift.Error> {
+    private func populatePosts(posts: [Post]) -> AnyPublisher<[PostWithUser], Error> {
         getUsersMap(posts: posts)
             .map { userMap in
                 return posts.compactMap { post in
@@ -134,7 +138,7 @@ extension API {
             .eraseToAnyPublisher()
     }
 
-    private func getUsersMap(posts: [Post]) -> AnyPublisher<[User.ID: User], Swift.Error> {
+    private func getUsersMap(posts: [Post]) -> AnyPublisher<[User.ID: User], Error> {
         posts
             .publisher
             .flatMap(getUser)
@@ -149,11 +153,27 @@ extension API {
         // the order of the posts array was not preserved
         return Dictionary(users.map({ (key: $0.id, value: $0) }), uniquingKeysWith: { $1 })
     }
+
+    // MARK: Post with User
+
+    func getPostWithUser(withID postId: Post.ID) -> AnyPublisher<PostWithUser, Error> {
+        getPost(withID: postId)
+            .flatMap(self.populatePost(post:))
+            .eraseToAnyPublisher()
+    }
+
+    private func populatePost(post: Post) -> AnyPublisher<PostWithUser, Error> {
+        getUser(post: post)
+            .map({ PostWithUser(post: post, author: $0) })
+            .eraseToAnyPublisher()
+    }
 }
 
 extension API.PostWithUser: Identifiable {
     var id: API.Post.ID { post.id }
 }
+
+// MARK: - Photo URL
 
 extension API {
     static func userPhotoURL(userID: User.ID) -> URL? {

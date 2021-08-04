@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct PostsDemoApp: App {
+    let router = Router(api: .main)
+
     var body: some Scene {
         WindowGroup {
-            PostsContainerView(repo: PostsRepo.main)
+            router.destination(route: .main)
         }
     }
 }

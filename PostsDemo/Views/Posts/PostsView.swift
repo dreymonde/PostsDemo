@@ -8,21 +8,42 @@
 import SwiftUI
 
 struct PostsView: View {
-    let posts: Sourceful<[Post]>
-    @Binding var isPullToRefreshShowing: Bool
-    let onRefresh: () -> ()
+    @EnvironmentObject var router: Router
+
+    @ObservedObject var repo: PostsRepo
+    @State var isPullToRefreshShowing: Bool = false
 
     var body: some View {
         NavigationView {
-            List(posts.value) { post in
-                NavigationLink(
-                    destination: PostDetailsView(post: post),
-                    label: {
-                        PostCompactView(post: post)
-                    })
+            ZStack {
+                List(repo.state.existing.value) { post in
+                    NavigationLink(
+                        destination: router.destination(route: .postDetails(post)),
+                        label: {
+                            PostCompactView(post: post)
+                        })
+                }
+                .listStyle(InsetGroupedListStyle())
+                .pullToRefresh(isShowing: $isPullToRefreshShowing) {
+                    self.repo.refresh()
+                }
+                .onReceive(repo.objectWillChange, perform: { _ in
+                    self.isPullToRefreshShowing = false
+                })
+                .onAppear { self.repo.fetchPosts() }
+                // this will show the source of the data
+                // (memory / cache / server),
+                // only in debug mode
+                .debugSourceTitle(repoState: repo.state)
+                .navigationTitle("Posts")
+                .alert(repoState: $repo.state, retry: {
+                    self.repo.refresh()
+                })
+
+                if repo.state.isLoading {
+                    ProgressView()
+                }
             }
-            .pullToRefresh(isShowing: $isPullToRefreshShowing, onRefresh: onRefresh)
-            .navigationTitle("Posts")
         }
     }
 }
@@ -53,7 +74,6 @@ struct PostCompactView: View {
 struct PostsView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-//            PostsView(posts: [.mock(1), .mock(2), .mock(3)], isPullToRefreshShowing: .init(get: { false }, set: { _ in }), onRefresh: { })
             PostCompactView(post: .mock(1))
                 .padding()
                 .previewLayout(.sizeThatFits)

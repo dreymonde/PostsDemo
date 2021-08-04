@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C168D5626BAEBFD0036729A /* RepoState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C168D5526BAEBFD0036729A /* RepoState.swift */; };
+		7C168D5826BAEC0D0036729A /* PostRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C168D5726BAEC0D0036729A /* PostRepo.swift */; };
+		7C7947F226BAF6590034476D /* SwiftUI+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7947F126BAF6590034476D /* SwiftUI+Extensions.swift */; };
+		7C7947F426BAFBA30034476D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7947F326BAFBA30034476D /* Router.swift */; };
+		7C7947F726BAFDBA0034476D /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 7C7947F626BAFDBA0034476D /* SwiftUIRefresh */; };
+		7C7947F926BAFEA50034476D /* Sourceful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7947F826BAFEA50034476D /* Sourceful.swift */; };
 		7CD5575826B7F30100707A89 /* PostsDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5575726B7F30100707A89 /* PostsDemoApp.swift */; };
-		7CD5575A26B7F30100707A89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5575926B7F30100707A89 /* ContentView.swift */; };
 		7CD5575C26B7F30100707A89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5575B26B7F30100707A89 /* Assets.xcassets */; };
 		7CD5575F26B7F30100707A89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5575E26B7F30100707A89 /* Preview Assets.xcassets */; };
 		7CD5576A26B7F30200707A89 /* PostsDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5576926B7F30200707A89 /* PostsDemoTests.swift */; };
@@ -23,11 +28,9 @@
 		7CD5579626B8066400707A89 /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5579526B8066400707A89 /* PostsView.swift */; };
 		7CD5579826B8070800707A89 /* PostsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5579726B8070800707A89 /* PostsRepo.swift */; };
 		7CD5579A26B8084000707A89 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5579926B8084000707A89 /* Model.swift */; };
-		7CD5579C26B80DAB00707A89 /* PostsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5579B26B80DAB00707A89 /* PostsContainerView.swift */; };
 		7CD5579F26B8140600707A89 /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5579E26B8140600707A89 /* PostDetailsView.swift */; };
 		7CD557A226B814BC00707A89 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7CD557A126B814BC00707A89 /* NukeUI */; };
 		7CD557A426B8189300707A89 /* LinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD557A326B8189300707A89 /* LinkService.swift */; };
-		7CD557A726B81D6400707A89 /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 7CD557A626B81D6400707A89 /* SwiftUIRefresh */; };
 		7CD557A926B87BC900707A89 /* RepoCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD557A826B87BC900707A89 /* RepoCache.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,9 +52,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C168D5526BAEBFD0036729A /* RepoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoState.swift; sourceTree = "<group>"; };
+		7C168D5726BAEC0D0036729A /* PostRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepo.swift; sourceTree = "<group>"; };
+		7C7947F126BAF6590034476D /* SwiftUI+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Extensions.swift"; sourceTree = "<group>"; };
+		7C7947F326BAFBA30034476D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		7C7947F826BAFEA50034476D /* Sourceful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sourceful.swift; sourceTree = "<group>"; };
 		7CD5575426B7F30100707A89 /* PostsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD5575726B7F30100707A89 /* PostsDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsDemoApp.swift; sourceTree = "<group>"; };
-		7CD5575926B7F30100707A89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7CD5575B26B7F30100707A89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CD5575E26B7F30100707A89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7CD5576026B7F30100707A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,7 +78,6 @@
 		7CD5579526B8066400707A89 /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
 		7CD5579726B8070800707A89 /* PostsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepo.swift; sourceTree = "<group>"; };
 		7CD5579926B8084000707A89 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		7CD5579B26B80DAB00707A89 /* PostsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsContainerView.swift; sourceTree = "<group>"; };
 		7CD5579E26B8140600707A89 /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
 		7CD557A326B8189300707A89 /* LinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkService.swift; sourceTree = "<group>"; };
 		7CD557A826B87BC900707A89 /* RepoCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCache.swift; sourceTree = "<group>"; };
@@ -82,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CD557A726B81D6400707A89 /* SwiftUIRefresh in Frameworks */,
+				7C7947F726BAFDBA0034476D /* SwiftUIRefresh in Frameworks */,
 				7CD557A226B814BC00707A89 /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +111,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C168D5326BAEBE90036729A /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				7CD5579726B8070800707A89 /* PostsRepo.swift */,
+				7C168D5726BAEC0D0036729A /* PostRepo.swift */,
+				7CD557A826B87BC900707A89 /* RepoCache.swift */,
+				7C168D5526BAEBFD0036729A /* RepoState.swift */,
+				7C7947F826BAFEA50034476D /* Sourceful.swift */,
+			);
+			path = Repos;
+			sourceTree = "<group>";
+		};
+		7C168D5426BAEBED0036729A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7CD5578426B7F35100707A89 /* API.swift */,
+				7CD5578526B7F35100707A89 /* Network.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		7CD5574B26B7F30100707A89 = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +160,6 @@
 				7CD5578326B7F31100707A89 /* Views */,
 				7CD5578226B7F30C00707A89 /* Services */,
 				7CD5575726B7F30100707A89 /* PostsDemoApp.swift */,
-				7CD5575926B7F30100707A89 /* ContentView.swift */,
 				7CD5579926B8084000707A89 /* Model.swift */,
 				7CD5575B26B7F30100707A89 /* Assets.xcassets */,
 				7CD5576026B7F30100707A89 /* Info.plist */,
@@ -173,11 +199,9 @@
 		7CD5578226B7F30C00707A89 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7CD5579726B8070800707A89 /* PostsRepo.swift */,
-				7CD5578426B7F35100707A89 /* API.swift */,
-				7CD5578526B7F35100707A89 /* Network.swift */,
+				7C168D5426BAEBED0036729A /* Networking */,
+				7C168D5326BAEBE90036729A /* Repos */,
 				7CD557A326B8189300707A89 /* LinkService.swift */,
-				7CD557A826B87BC900707A89 /* RepoCache.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -187,6 +211,8 @@
 			children = (
 				7CD5579D26B813F900707A89 /* PostDetails */,
 				7CD5579426B8065600707A89 /* Posts */,
+				7C7947F126BAF6590034476D /* SwiftUI+Extensions.swift */,
+				7C7947F326BAFBA30034476D /* Router.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				7CD5579526B8066400707A89 /* PostsView.swift */,
-				7CD5579B26B80DAB00707A89 /* PostsContainerView.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -243,7 +268,7 @@
 			name = PostsDemo;
 			packageProductDependencies = (
 				7CD557A126B814BC00707A89 /* NukeUI */,
-				7CD557A626B81D6400707A89 /* SwiftUIRefresh */,
+				7C7947F626BAFDBA0034476D /* SwiftUIRefresh */,
 			);
 			productName = PostsDemo;
 			productReference = 7CD5575426B7F30100707A89 /* PostsDemo.app */;
@@ -318,7 +343,7 @@
 			mainGroup = 7CD5574B26B7F30100707A89;
 			packageReferences = (
 				7CD557A026B814BC00707A89 /* XCRemoteSwiftPackageReference "NukeUI" */,
-				7CD557A526B81D6400707A89 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
+				7C7947F526BAFDBA0034476D /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
 			);
 			productRefGroup = 7CD5575526B7F30100707A89 /* Products */;
 			projectDirPath = "";
@@ -364,17 +389,20 @@
 			files = (
 				7CD5579A26B8084000707A89 /* Model.swift in Sources */,
 				7CD5579626B8066400707A89 /* PostsView.swift in Sources */,
-				7CD5575A26B7F30100707A89 /* ContentView.swift in Sources */,
+				7C7947F926BAFEA50034476D /* Sourceful.swift in Sources */,
 				7CD5578626B7F35100707A89 /* API.swift in Sources */,
 				7CD5579F26B8140600707A89 /* PostDetailsView.swift in Sources */,
+				7C168D5626BAEBFD0036729A /* RepoState.swift in Sources */,
 				7CD5578726B7F35100707A89 /* Network.swift in Sources */,
 				7CD5579126B8021A00707A89 /* FlatType.swift in Sources */,
-				7CD5579C26B80DAB00707A89 /* PostsContainerView.swift in Sources */,
+				7C7947F226BAF6590034476D /* SwiftUI+Extensions.swift in Sources */,
+				7C7947F426BAFBA30034476D /* Router.swift in Sources */,
 				7CD557A926B87BC900707A89 /* RepoCache.swift in Sources */,
 				7CD5579326B8023600707A89 /* Identifier.swift in Sources */,
 				7CD5575826B7F30100707A89 /* PostsDemoApp.swift in Sources */,
 				7CD5579826B8070800707A89 /* PostsRepo.swift in Sources */,
 				7CD557A426B8189300707A89 /* LinkService.swift in Sources */,
+				7C168D5826BAEC0D0036729A /* PostRepo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +563,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"PostsDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = CD6M6ACBGV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PostsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -556,6 +585,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"PostsDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = CD6M6ACBGV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PostsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -692,6 +722,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7C7947F526BAFDBA0034476D /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUIRefresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
 		7CD557A026B814BC00707A89 /* XCRemoteSwiftPackageReference "NukeUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kean/NukeUI";
@@ -700,26 +738,18 @@
 				minimumVersion = 0.6.7;
 			};
 		};
-		7CD557A526B81D6400707A89 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUIRefresh.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.3;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7C7947F626BAFDBA0034476D /* SwiftUIRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C7947F526BAFDBA0034476D /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
+			productName = SwiftUIRefresh;
+		};
 		7CD557A126B814BC00707A89 /* NukeUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7CD557A026B814BC00707A89 /* XCRemoteSwiftPackageReference "NukeUI" */;
 			productName = NukeUI;
-		};
-		7CD557A626B81D6400707A89 /* SwiftUIRefresh */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7CD557A526B81D6400707A89 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
-			productName = SwiftUIRefresh;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

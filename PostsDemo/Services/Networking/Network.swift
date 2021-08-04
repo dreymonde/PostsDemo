@@ -53,6 +53,10 @@ final class Network {
                 return element.data
             }
             .decode(type: Response.self, decoder: Self.jsonDecoder)
+            // delay here is simply so that it's easier
+            // to see how caching / db layer works
+            .delay(for: 2.0, scheduler: DispatchQueue.main)
+            .timeout(10.0, scheduler: DispatchQueue.main)
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }

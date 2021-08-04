@@ -7,19 +7,37 @@
 
 import SwiftUI
 import NukeUI
+import SwiftUIRefresh
 
 struct PostDetailsView: View {
-    let post: Post
+    @StateObject var repo: PostRepo
+    @State var isPullToRefreshShowing: Bool = false
 
     var body: some View {
-        ScrollView {
-            UserBlockView(user: post.user)
+        List {
+            UserBlockView(user: repo.state.existing.value.user)
                 .padding()
-            PostBlockView(post: post)
+                .buttonStyle(PlainButtonStyle())
+            PostBlockView(post: repo.state.existing.value)
                 .padding()
+                .buttonStyle(PlainButtonStyle())
         }
-        .padding(.top, 1)
+        .pullToRefresh(isShowing: $isPullToRefreshShowing, onRefresh: {
+            self.repo.refresh()
+        })
+        .onReceive(repo.objectWillChange, perform: { _ in
+            self.isPullToRefreshShowing = false
+        })
+        // this will show the source of the data
+        // (memory / cache / server),
+        // only in debug mode
+        .debugSourceTitle(repoState: repo.state)
         .navigationTitle("Post")
+        .opacity(repo.state.existing.source.isLatest ? 1.0 : 0.7)
+        .onAppear { repo.fetchPost() }
+        .alert(repoState: $repo.state, retry: {
+            self.repo.refresh()
+        })
     }
 }
 
@@ -37,8 +55,11 @@ struct UserBlockView: View {
                     .font(.body)
                     .fontWeight(.semibold)
                 Link(user.email, destination: LinkService.emailURL(user: user))
+                    .foregroundColor(.blue)
                 Link(user.address.localized, destination: LinkService.gmapsURL(geo: user.address.geo))
+                    .foregroundColor(.blue)
                 Link(user.phone, destination: LinkService.callPhoneURL(user: user))
+                    .foregroundColor(.blue)
                 Text(user.company.name)
             }
             Spacer()
@@ -61,6 +82,6 @@ struct PostBlockView: View {
 
 struct PostDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        PostDetailsView(post: .mock(1))
+        PostDetailsView(repo: .init(api: .main, post: .mock(1)))
     }
 }
