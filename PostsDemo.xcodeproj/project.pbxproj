@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,22 @@
 		7CD5575F26B7F30100707A89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5575E26B7F30100707A89 /* Preview Assets.xcassets */; };
 		7CD5576A26B7F30200707A89 /* PostsDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5576926B7F30200707A89 /* PostsDemoTests.swift */; };
 		7CD5577526B7F30200707A89 /* PostsDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5577426B7F30200707A89 /* PostsDemoUITests.swift */; };
+		7CD5578626B7F35100707A89 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5578426B7F35100707A89 /* API.swift */; };
+		7CD5578726B7F35100707A89 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5578526B7F35100707A89 /* Network.swift */; };
+		7CD5578926B7F68B00707A89 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5578826B7F68B00707A89 /* XCTestCase+Extensions.swift */; };
+		7CD5578B26B7F6CD00707A89 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5578A26B7F6CD00707A89 /* APITests.swift */; };
+		7CD5578E26B7F6FC00707A89 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD5578D26B7F6FC00707A89 /* XCTest.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7CD5579126B8021A00707A89 /* FlatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5579026B8021A00707A89 /* FlatType.swift */; };
+		7CD5579326B8023600707A89 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5579226B8023600707A89 /* Identifier.swift */; };
+		7CD5579626B8066400707A89 /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5579526B8066400707A89 /* PostsView.swift */; };
+		7CD5579826B8070800707A89 /* PostsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5579726B8070800707A89 /* PostsRepo.swift */; };
+		7CD5579A26B8084000707A89 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5579926B8084000707A89 /* Model.swift */; };
+		7CD5579C26B80DAB00707A89 /* PostsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5579B26B80DAB00707A89 /* PostsContainerView.swift */; };
+		7CD5579F26B8140600707A89 /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5579E26B8140600707A89 /* PostDetailsView.swift */; };
+		7CD557A226B814BC00707A89 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7CD557A126B814BC00707A89 /* NukeUI */; };
+		7CD557A426B8189300707A89 /* LinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD557A326B8189300707A89 /* LinkService.swift */; };
+		7CD557A726B81D6400707A89 /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 7CD557A626B81D6400707A89 /* SwiftUIRefresh */; };
+		7CD557A926B87BC900707A89 /* RepoCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD557A826B87BC900707A89 /* RepoCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +61,20 @@
 		7CD5577026B7F30200707A89 /* PostsDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostsDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD5577426B7F30200707A89 /* PostsDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsDemoUITests.swift; sourceTree = "<group>"; };
 		7CD5577626B7F30200707A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CD5578426B7F35100707A89 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		7CD5578526B7F35100707A89 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		7CD5578826B7F68B00707A89 /* XCTestCase+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extensions.swift"; sourceTree = "<group>"; };
+		7CD5578A26B7F6CD00707A89 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		7CD5578D26B7F6FC00707A89 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7CD5579026B8021A00707A89 /* FlatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatType.swift; sourceTree = "<group>"; };
+		7CD5579226B8023600707A89 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		7CD5579526B8066400707A89 /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
+		7CD5579726B8070800707A89 /* PostsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepo.swift; sourceTree = "<group>"; };
+		7CD5579926B8084000707A89 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7CD5579B26B80DAB00707A89 /* PostsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsContainerView.swift; sourceTree = "<group>"; };
+		7CD5579E26B8140600707A89 /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
+		7CD557A326B8189300707A89 /* LinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkService.swift; sourceTree = "<group>"; };
+		7CD557A826B87BC900707A89 /* RepoCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CD557A726B81D6400707A89 /* SwiftUIRefresh in Frameworks */,
+				7CD557A226B814BC00707A89 /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CD5578E26B7F6FC00707A89 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +112,7 @@
 				7CD5576826B7F30200707A89 /* PostsDemoTests */,
 				7CD5577326B7F30200707A89 /* PostsDemoUITests */,
 				7CD5575526B7F30100707A89 /* Products */,
+				7CD5578C26B7F6FC00707A89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,8 +129,12 @@
 		7CD5575626B7F30100707A89 /* PostsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7CD5578F26B8021300707A89 /* Protocols */,
+				7CD5578326B7F31100707A89 /* Views */,
+				7CD5578226B7F30C00707A89 /* Services */,
 				7CD5575726B7F30100707A89 /* PostsDemoApp.swift */,
 				7CD5575926B7F30100707A89 /* ContentView.swift */,
+				7CD5579926B8084000707A89 /* Model.swift */,
 				7CD5575B26B7F30100707A89 /* Assets.xcassets */,
 				7CD5576026B7F30100707A89 /* Info.plist */,
 				7CD5575D26B7F30100707A89 /* Preview Content */,
@@ -116,7 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				7CD5576926B7F30200707A89 /* PostsDemoTests.swift */,
+				7CD5578A26B7F6CD00707A89 /* APITests.swift */,
 				7CD5576B26B7F30200707A89 /* Info.plist */,
+				7CD5578826B7F68B00707A89 /* XCTestCase+Extensions.swift */,
 			);
 			path = PostsDemoTests;
 			sourceTree = "<group>";
@@ -128,6 +168,61 @@
 				7CD5577626B7F30200707A89 /* Info.plist */,
 			);
 			path = PostsDemoUITests;
+			sourceTree = "<group>";
+		};
+		7CD5578226B7F30C00707A89 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7CD5579726B8070800707A89 /* PostsRepo.swift */,
+				7CD5578426B7F35100707A89 /* API.swift */,
+				7CD5578526B7F35100707A89 /* Network.swift */,
+				7CD557A326B8189300707A89 /* LinkService.swift */,
+				7CD557A826B87BC900707A89 /* RepoCache.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7CD5578326B7F31100707A89 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7CD5579D26B813F900707A89 /* PostDetails */,
+				7CD5579426B8065600707A89 /* Posts */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7CD5578C26B7F6FC00707A89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CD5578D26B7F6FC00707A89 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7CD5578F26B8021300707A89 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7CD5579026B8021A00707A89 /* FlatType.swift */,
+				7CD5579226B8023600707A89 /* Identifier.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7CD5579426B8065600707A89 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				7CD5579526B8066400707A89 /* PostsView.swift */,
+				7CD5579B26B80DAB00707A89 /* PostsContainerView.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		7CD5579D26B813F900707A89 /* PostDetails */ = {
+			isa = PBXGroup;
+			children = (
+				7CD5579E26B8140600707A89 /* PostDetailsView.swift */,
+			);
+			path = PostDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +241,10 @@
 			dependencies = (
 			);
 			name = PostsDemo;
+			packageProductDependencies = (
+				7CD557A126B814BC00707A89 /* NukeUI */,
+				7CD557A626B81D6400707A89 /* SwiftUIRefresh */,
+			);
 			productName = PostsDemo;
 			productReference = 7CD5575426B7F30100707A89 /* PostsDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +316,10 @@
 				Base,
 			);
 			mainGroup = 7CD5574B26B7F30100707A89;
+			packageReferences = (
+				7CD557A026B814BC00707A89 /* XCRemoteSwiftPackageReference "NukeUI" */,
+				7CD557A526B81D6400707A89 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
+			);
 			productRefGroup = 7CD5575526B7F30100707A89 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +362,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CD5579A26B8084000707A89 /* Model.swift in Sources */,
+				7CD5579626B8066400707A89 /* PostsView.swift in Sources */,
 				7CD5575A26B7F30100707A89 /* ContentView.swift in Sources */,
+				7CD5578626B7F35100707A89 /* API.swift in Sources */,
+				7CD5579F26B8140600707A89 /* PostDetailsView.swift in Sources */,
+				7CD5578726B7F35100707A89 /* Network.swift in Sources */,
+				7CD5579126B8021A00707A89 /* FlatType.swift in Sources */,
+				7CD5579C26B80DAB00707A89 /* PostsContainerView.swift in Sources */,
+				7CD557A926B87BC900707A89 /* RepoCache.swift in Sources */,
+				7CD5579326B8023600707A89 /* Identifier.swift in Sources */,
 				7CD5575826B7F30100707A89 /* PostsDemoApp.swift in Sources */,
+				7CD5579826B8070800707A89 /* PostsRepo.swift in Sources */,
+				7CD557A426B8189300707A89 /* LinkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +382,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CD5578926B7F68B00707A89 /* XCTestCase+Extensions.swift in Sources */,
 				7CD5576A26B7F30200707A89 /* PostsDemoTests.swift in Sources */,
+				7CD5578B26B7F6CD00707A89 /* APITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +690,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7CD557A026B814BC00707A89 /* XCRemoteSwiftPackageReference "NukeUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/NukeUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
+		7CD557A526B81D6400707A89 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUIRefresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7CD557A126B814BC00707A89 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7CD557A026B814BC00707A89 /* XCRemoteSwiftPackageReference "NukeUI" */;
+			productName = NukeUI;
+		};
+		7CD557A626B81D6400707A89 /* SwiftUIRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7CD557A526B81D6400707A89 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
+			productName = SwiftUIRefresh;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7CD5574C26B7F30100707A89 /* Project object */;
 }
