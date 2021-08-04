@@ -72,6 +72,7 @@ final class RepoCache<Value: Codable> {
             .eraseToAnyPublisher()
 
         return cached.merge(with: latest)
+            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
 }
