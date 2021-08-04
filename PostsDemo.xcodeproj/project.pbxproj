@@ -13,6 +13,7 @@
 		7C7947F426BAFBA30034476D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7947F326BAFBA30034476D /* Router.swift */; };
 		7C7947F726BAFDBA0034476D /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 7C7947F626BAFDBA0034476D /* SwiftUIRefresh */; };
 		7C7947F926BAFEA50034476D /* Sourceful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7947F826BAFEA50034476D /* Sourceful.swift */; };
+		7C7947FC26BB00A50034476D /* Combine+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7947FB26BB00A50034476D /* Combine+Extensions.swift */; };
 		7CD5575826B7F30100707A89 /* PostsDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD5575726B7F30100707A89 /* PostsDemoApp.swift */; };
 		7CD5575C26B7F30100707A89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5575B26B7F30100707A89 /* Assets.xcassets */; };
 		7CD5575F26B7F30100707A89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD5575E26B7F30100707A89 /* Preview Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		7C7947F126BAF6590034476D /* SwiftUI+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Extensions.swift"; sourceTree = "<group>"; };
 		7C7947F326BAFBA30034476D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		7C7947F826BAFEA50034476D /* Sourceful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sourceful.swift; sourceTree = "<group>"; };
+		7C7947FB26BB00A50034476D /* Combine+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Extensions.swift"; sourceTree = "<group>"; };
 		7CD5575426B7F30100707A89 /* PostsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD5575726B7F30100707A89 /* PostsDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsDemoApp.swift; sourceTree = "<group>"; };
 		7CD5575B26B7F30100707A89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -132,6 +134,15 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		7C7947FA26BB00970034476D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7C7947F126BAF6590034476D /* SwiftUI+Extensions.swift */,
+				7C7947FB26BB00A50034476D /* Combine+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		7CD5574B26B7F30100707A89 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +167,7 @@
 		7CD5575626B7F30100707A89 /* PostsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7C7947FA26BB00970034476D /* Extensions */,
 				7CD5578F26B8021300707A89 /* Protocols */,
 				7CD5578326B7F31100707A89 /* Views */,
 				7CD5578226B7F30C00707A89 /* Services */,
@@ -211,7 +223,6 @@
 			children = (
 				7CD5579D26B813F900707A89 /* PostDetails */,
 				7CD5579426B8065600707A89 /* Posts */,
-				7C7947F126BAF6590034476D /* SwiftUI+Extensions.swift */,
 				7C7947F326BAFBA30034476D /* Router.swift */,
 			);
 			path = Views;
@@ -400,6 +411,7 @@
 				7CD557A926B87BC900707A89 /* RepoCache.swift in Sources */,
 				7CD5579326B8023600707A89 /* Identifier.swift in Sources */,
 				7CD5575826B7F30100707A89 /* PostsDemoApp.swift in Sources */,
+				7C7947FC26BB00A50034476D /* Combine+Extensions.swift in Sources */,
 				7CD5579826B8070800707A89 /* PostsRepo.swift in Sources */,
 				7CD557A426B8189300707A89 /* LinkService.swift in Sources */,
 				7C168D5826BAEC0D0036729A /* PostRepo.swift in Sources */,
