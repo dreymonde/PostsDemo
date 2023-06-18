@@ -1,6 +1,6 @@
 # PostsDemo
 
-Take home project
+Take home project..
 
 ## How to launch
 
